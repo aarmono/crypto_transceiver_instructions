@@ -4,7 +4,7 @@ This document provides an overview of the Crypto Voice Transceiver project as
 well as a brief theory of operations and instructions for how to build one
 using the provided software builds
 
-## What Is It?##
+## What Is It? ##
 
 The Crypto Voice Transceiver is a system for implementing
 [Secure Voice](https://en.wikipedia.org/wiki/Secure_voice). The system digitizes
@@ -106,6 +106,12 @@ polished or portable, such as
   unplugging USB connectors
 * SD card extenders to make it easier to insert/remove the SD card
 * Enclosure to contain the build
+
+Note that the system works *very* well using phone charger battery instead of a
+power supply. I ran a simple "loopback" test with the device connected to an
+8000 mAH battery, and it remained operational for almost 13 hours. The software
+does not require a lot of power, and this design is well-suited to portable
+applications
 
 If you decide to put it in an enclosure, it is recommended that you do *not* do
 so until you go through the programming and configuration process.
