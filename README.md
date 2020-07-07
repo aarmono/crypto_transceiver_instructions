@@ -106,3 +106,35 @@ polished or portable, such as
   unplugging USB connectors
 * SD card extenders to make it easier to insert/remove the SD card
 * Enclosure to contain the build
+
+If you decide to put it in an enclosure, it is recommended that you do *not* do
+so until you go through the programming and configuration process.
+
+## Programming ##
+
+1. Download the sdcard.img.zip
+   [release](https://github.com/aarmono/crypto_transceiver_buildroot/releases).
+   This is a heavily customized version of the Linux software that normally runs
+   on a Raspberry Pi and will *not* run anything else but the barebones software
+   necessary to run the crypto_transceiver software. *Note:* you only need to
+   flash the SD card once. For subsequent firmware updates you only need to
+   download the zImage file
+1. Unzip the sdcard.img.zip. You should then have a file named sdcard.img
+1. Follow the [instructions](https://www.raspberrypi.org/documentation/installation/installing-images/)
+   on the Raspberry Pi site for flashing an image to the SD card.
+
+## Generatng and Loading a Key ##
+
+1. Download the Crypto Transceiver Config
+   [Utility](https://github.com/aarmono/CryptoTransceiverUtil/releases). This
+   will allow you to generate an encryption key and load it onto the SD card or
+   update firmware versions when there are updated versions of firmware
+1. Run the Crypto Transciever Config Utility
+1. Click "New Key" ![New Key](images/new_key.png). You should see text in the
+   "Key Hash" textbox. Note this is *not* the key itself but merely a way you
+   can visually distinguish whether or not two SD cards are programmed with
+   the same key
+1. Click "Save Key to SD" ![Save Key](images/save_key.png)
+1. In the dialog box that appears, select the SD card you wish to write to.
+   ![Save Dialog](images/save_dialog.png)
+1. Click "OK"
