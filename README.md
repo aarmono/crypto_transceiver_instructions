@@ -44,14 +44,15 @@ is shown below.
 ![Encryption](images/Encryption.png)
 
 After a transmission completes and after every minute of silence, a new randomly
-generated initialization vector obtained from the random number generator. This
-initialization vector is fed into a KMAC-256 keyed hash algorithm along with a
-1048 bit shared key embedded into the Crypto Voice Transceiver. This generates
-a new 256-bit AES key for each block. This key along with the initialization
-vector is fed into the AES cipher and produces a stream key which is then XOR-ed
-with the 52-bit compressed voice block to obtain a 52-bit ciphertext block. 48
-of these 52 bits are then copied into a shift register which is used as the
-initialization vector for encrypting the next block.
+generated 128-bit initialization vector obtained from the random number
+generator. This initialization vector is fed into a KMAC-256 keyed hash
+algorithm along with a 1048 bit shared key embedded into the Crypto Voice
+Transceiver. This generates a new 256-bit AES key for each block. This key along
+with the initialization vector is fed into the AES cipher and produces a stream
+key which is then XOR-ed with the 52-bit compressed voice block to obtain a
+52-bit ciphertext block. 48 of these 52 bits are then copied into a 128-bit
+shift register which is used as the initialization vector for encrypting the
+next block.
 
 Decryption operates the same way, but in reverse. Whenever a new initialization
 vector is produced there is some loss of data as the receiver resynchronizes,
@@ -111,7 +112,7 @@ Note that the system works *very* well using phone charger battery instead of a
 power supply. I ran a simple "loopback" test with the device connected to an
 8000 mAH battery, and it remained operational for almost 13 hours. The software
 does not require a lot of power, and this design is well-suited to portable
-applications
+applications.
 
 If you decide to put it in an enclosure, it is recommended that you do *not* do
 so until you go through the programming and configuration process.
