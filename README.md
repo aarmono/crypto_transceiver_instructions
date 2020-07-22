@@ -237,15 +237,22 @@ will be connected to your headset.
 A prompt should appear on the screen telling you to select one of the audio
 devices or "save". To perform this part of the setup process it is important
 to have some way of checking voice levels. One way to do this is to connect
-the radio output to the radio input using a male-male
-cable. This will verify that the levels on the radio side are adequate to
-decode the signal as well as provide you with voice feedback you can use to
-adjust the headset levels.
+the radio output to the radio input using a male-male cable. This will verify
+that the levels on the radio side are adequate to decode the signal as well as
+provide you with voice feedback you can use to adjust the headset levels.
 
 Once you do this, select each device. A user interface will be displayed on the
-screen that will allow you to adjust levels of each audio device. The left/right
-arrow keys will allow you to cycle through settings, and the up/down arrow keys
-will allow you to adjust volume settings. Once you are done, the Escape key will
-exit out of the UI. Once you have adjusted both interfaces, follow the commands
-on the screen to save the settings to the SD card. They will be loaded from the
-SD card whenever the system is powered on.
+screen that will allow you to adjust levels of each audio device. Initially the
+screen displayed is the speaker output. This screen is a bit confusing, because
+it will show you a volume bar labeled "microphone". This setting configures the
+side tone volume. To adjust the microphone volume you will need to press "tab"
+until you see just one volume bar labeled "microphone". Side tone needs to be
+turned *off* on the radio device: press the "m" key to mute it; you should
+see "MM" displayed below the volume bar when it is muted. I would also recommend
+turning off auto-gain on the radio device, also by pressing the "m" key to mute
+
+The left/right arrow keys will allow you to cycle through settings, and the
+up/down arrow keys will allow you to adjust volume settings. Once you are done,
+the Escape key will exit out of the UI. Once you have adjusted both interfaces,
+follow the commands on the screen to save the settings to the SD card. They will
+be loaded from the SD card whenever the system is powered on.
