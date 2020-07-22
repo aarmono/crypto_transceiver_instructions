@@ -43,16 +43,17 @@ is shown below.
 
 ![Encryption](images/Encryption.png)
 
-After a transmission completes and after every minute of silence, a new randomly
-generated 128-bit initialization vector obtained from the random number
-generator. This initialization vector is fed into a KMAC-256 keyed hash
-algorithm along with a 1048 bit shared key embedded into the Crypto Voice
-Transceiver. This generates a new 256-bit AES key for each block. This key along
-with the initialization vector is fed into the AES cipher and produces a stream
-key which is then XOR-ed with the 52-bit compressed voice block to obtain a
-52-bit ciphertext block. 48 of these 52 bits are then copied into a 128-bit
-shift register which is used as the initialization vector for encrypting the
-next block.
+After a transmission completes and after every minute of silence after, a new
+randomly generated 128-bit initialization vector is obtained from the random
+number generator. When this occurs, a beep can be heard from the headset
+speaker. This initialization vector is fed into a KMAC-256 keyed hash algorithm
+along with a 1048 bit shared key embedded into the Crypto Voice Transceiver.
+This generates a new 256-bit AES key for each block. This key along with the
+initialization vector is fed into the AES cipher and produces a stream key
+which is then XOR-ed with the 52-bit compressed voice block to obtain a 52-bit
+ciphertext block. 48 of these 52 bits are then copied into a 128-bit shift
+register which is used as the initialization vector for encrypting the next
+block.
 
 Decryption operates the same way, but in reverse. Whenever a new initialization
 vector is produced there is some loss of data as the receiver resynchronizes,
