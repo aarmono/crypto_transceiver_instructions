@@ -170,6 +170,9 @@ modification this build could be put into an enclosure for improved portability.
 
 ## Programming ##
 
+This programming and key generation process is also shown in
+[this video](https://www.youtube.com/watch?v=EnVlljKxq0s).
+
 1. Download the sdcard.img.zip
    [release](https://github.com/aarmono/crypto_transceiver_buildroot/releases).
    This is a heavily customized version of the Linux software that normally runs
