@@ -117,6 +117,57 @@ applications.
 If you decide to put it in an enclosure, it is recommended that you do *not* do
 so until you go through the programming and configuration process.
 
+## An Example Build ##
+
+![Build](images/side_view.jpg)
+
+This section shows an example build that the author made. With some slight
+modification this build could be put into an enclosure for improved portability.
+
+* 1 [Raspberry Pi Model 3 B+ with enclosure and heatsinks.](https://www.amazon.com/gp/product/B01C6EQNNK/).
+  You do not need the power supply. If you put the build in an enclosure you do
+  not need an enclosure for the Pi.
+* 1 Cell phone battery charger (I used a spare one I had). See above sections
+  for power supply requirements. If you wish to attach the power button to the
+  side of the battery you will need a reasonably thick battery
+* 2 [MISO USB Audio devices](https://www.amazon.com/gp/product/B0828J36JD/)
+* 1 [Micro USB Power Switch cable](https://www.amazon.com/gp/product/B018BFWLRU/)
+* 1 [Micro SD Extension Cable](https://www.amazon.com/gp/product/B085HGTJWT/).
+  This makes it easier to access the SD card when the Pi is mounted to the
+  battery pack
+* 1 SD Card. Likely any SD Card you have will work
+* 1 Short Micro USB Cable
+
+### Build Procedure ###
+
+1) Follow the instructions that came with the Pi to install the heatsinks and
+   install the Pi into its case
+1) Insert the SD Extension Cable into the Pi's SD card slot
+1) Use hot glue or heavy duty double-sided tape to attach the SD Extension Cable
+   to the top of the Pi enclosure. If the ribbon cable is too long, fold the
+   ribbon cable in place using a dab of hot glue
+1) Install the USB Audio devices into the bottom USB ports of the Pi
+1) Use hot glue or heavy duty double-sided tape to attach the Pi to the top of
+   the battery pack. If there are charge indicator lights or power buttons, try
+   not to obstruct them
+1) Plug the Micro USB Cable into the Micro USB Power Switch. Plug the Male side
+   of the Micro USB Power Switch into the Pi's Power port.
+1) Route the Micro USB Power Switch cable under the USB Audio devices so that
+   they are wedged between the battery pack and the USB Audio device dongles.
+   Hot glue the cable to the battery pack and USB Audio devices to to prevent
+   them from being bent or damaged, taking care that the USB cable is not
+   pushing them above horizontal. ![Bottom](images/back_cable_route.jpg)
+1) Use heavy duty double-sided tape or hot glue to attach the power switch to
+   the side of the battery
+1) Hot glue the audio connectors from the USB Audio devices to the sides of the
+   Pi enclosure. As cables will be plugged and unplugged into these connectors,
+   ensure you use plenty of glue to hold the connectors firmly in place
+1) Plug the USB A side of the cable into the highest power outlet of the battery
+   pack
+1) Label the USB Audio Devices once you have gone through the configuration
+   process and know which one is the headset device and which is the radio
+   device
+
 ## Programming ##
 
 1. Download the sdcard.img.zip
@@ -190,54 +241,3 @@ will allow you to adjust volume settings. Once you are done, the Escape key will
 exit out of the UI. Once you have adjusted both interfaces, follow the commands
 on the screen to save the settings to the SD card. They will be loaded from the
 SD card whenever the system is powered on.
-
-## An Example Build ##
-
-![Build](images/side_view.jpg)
-
-This section shows an example build that the author made. With some slight
-modification this build could be put into an enclosure for improved portability.
-
-* 1 [Raspberry Pi Model 3 B+ with enclosure and heatsinks.](https://www.amazon.com/gp/product/B01C6EQNNK/).
-  You do not need the power supply. If you put the build in an enclosure you do
-  not need an enclosure for the Pi.
-* 1 Cell phone battery charger (I used a spare one I had). See above sections
-  for power supply requirements. If you wish to attach the power button to the
-  side of the battery you will need a reasonably thick battery
-* 2 [MISO USB Audio devices](https://www.amazon.com/gp/product/B0828J36JD/)
-* 1 [Micro USB Power Switch cable](https://www.amazon.com/gp/product/B018BFWLRU/)
-* 1 [Micro SD Extension Cable](https://www.amazon.com/gp/product/B085HGTJWT/).
-  This makes it easier to access the SD card when the Pi is mounted to the
-  battery pack
-* 1 SD Card. Likely any SD Card you have will work
-* 1 Short Micro USB Cable
-
-### Build Procedure ###
-
-1) Follow the instructions that came with the Pi to install the heatsinks and
-   install the Pi into its case
-1) Insert the SD Extension Cable into the Pi's SD card slot
-1) Use hot glue or heavy duty double-sided tape to attach the SD Extension Cable
-   to the top of the Pi enclosure. If the ribbon cable is too long, fold the
-   ribbon cable in place using a dab of hot glue
-1) Install the USB Audio devices into the bottom USB ports of the Pi
-1) Use hot glue or heavy duty double-sided tape to attach the Pi to the top of
-   the battery pack. If there are charge indicator lights or power buttons, try
-   not to obstruct them
-1) Plug the Micro USB Cable into the Micro USB Power Switch. Plug the Male side
-   of the Micro USB Power Switch into the Pi's Power port.
-1) ![Bottom](images/back_cable_route.jpg) Route the Micro USB Power Switch cable
-   under the USB Audio devices so that they are wedged between the battery pack
-   and the USB Audio device dongles. Hot glue the cable to the battery pack and
-   USB Audio devices to to prevent them from being bent or damaged, taking care
-   that the USB cable is not pushing them above horizontal.
-1) Use heavy duty double-sided tape or hot glue to attach the power switch to
-   the side of the battery
-1) Hot glue the audio connectors from the USB Audio devices to the sides of the
-   Pi enclosure. As cables will be plugged and unplugged into these connectors,
-   ensure you use plenty of glue to hold the connectors firmly in place
-1) Plug the USB A side of the cable into the highest power outlet of the battery
-   pack
-1) Label the USB Audio Devices once you have gone through the configuration
-   process and know which one is the headset device and which is the radio
-   device
