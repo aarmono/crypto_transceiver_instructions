@@ -93,9 +93,9 @@ I selected a product with TRRS (instead of separate speaker/microphone
 connectors) because both my headset and radio cable used TRRS connectors. If
 you don't, find a one that has separate speaker/microphone connectors.
 
-I selected a product with the built-in audio cable because I plan to put my
-completed built in an enclosure, and the built-in cables mean I don't need to
-buy extension cables to route the audio jacks out the enclosure.
+I selected a product with the built-in audio cable because I originally planed
+to put my completed built in an enclosure, and the built-in cables mean I don't
+need to buy extension cables to route the audio jacks out the enclosure.
 
 One thing to be cautious of is some of the devices are rather large, and the
 USB connectors on the PI are spaced rather close together. Whatever you buy,
@@ -106,8 +106,8 @@ make sure you can actually plug two of them in at the same time.
 More advanced builds may involve additional components to make the design more
 polished or portable, such as
 
-* USB phone charger instead of a power supply (get one as close to 2.5A output
-  as possible)
+* USB phone charger instead of a power supply (get one that has at least one
+  port that outputs as close to 2.5A output as possible)
 * Micro USB power switch cable to allow power to be disconnected without
   unplugging USB connectors
 * SD card extenders to make it easier to insert/remove the SD card
