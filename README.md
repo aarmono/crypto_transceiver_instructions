@@ -16,6 +16,7 @@ FM voice radio or analog telephone.
 
 Conceptually the device is similar to military voice encryption terminals like
 the [KY-99](https://www.cryptomuseum.com/crypto/usa/ky99/index.htm) or
+commercial versions like the
 [Securenet](https://www.cryptomuseum.com/crypto/motorola/saber/index.htm#algo)
 modules from Motorola. On one end of the device the user plugs in a headset,
 and on the other end the user connects the device to a radio or analog phone.
@@ -65,7 +66,10 @@ Once the encrypted block is produced, it is transmitted using an audio frequency
 shift keying modulator. This is a standard means of transmitting digital data
 at low bit rates over analog mediums intended to transfer voice. This is how
 the original [acoustic coupler](https://en.wikipedia.org/wiki/Acoustic_coupler)
-modems used to transfer data over phone lines worked.
+modems used to transfer data over phone lines worked. The low data rate required
+of the vocoder and slow data rate of the frequency shift keying modulator allows
+the encrypted digital voice signal to be transmitted over a standard narrowband
+FM radio channel.
 
 ## How Do You Build One? ##
 
