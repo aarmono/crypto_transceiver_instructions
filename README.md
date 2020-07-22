@@ -65,7 +65,7 @@ Once the encrypted block is produced, it is transmitted using an audio frequency
 shift keying modulator. This is a standard means of transmitting digital data
 at low bit rates over analog mediums intended to transfer voice. This is how
 the original [acoustic coupler](https://en.wikipedia.org/wiki/Acoustic_coupler)
-modems used to transfer data over phone lines.
+modems used to transfer data over phone lines worked.
 
 ## How Do You Build One? ##
 
