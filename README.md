@@ -75,7 +75,8 @@ FM radio channel.
 
 At a minimum, you will need the following:
 
-* 1 Raspberry Pi 3 Model B+
+* 1 Raspberry Pi 3 Model B+ or Raspberry Pi Zero
+* 1 USB OTG Hub (if using a Raspberry Pi Zero)
 * 1 Raspberry Pi Power Supply
 * 2 USB audio receivers (I used
   [these](https://www.amazon.com/MillSO-Sapphire-External-Headphone-Desktops/dp/B0827XDGV4),
@@ -178,14 +179,14 @@ modification this build could be put into an enclosure for improved portability.
 This programming and key generation process is also shown in
 [this video](https://www.youtube.com/watch?v=EnVlljKxq0s).
 
-1. Download the sdcard.img.zip
-   [release](https://github.com/aarmono/crypto_transceiver_buildroot/releases).
-   This is a heavily customized version of the Linux software that normally runs
-   on a Raspberry Pi and will *not* run anything else but the barebones software
-   necessary to run the crypto_transceiver software. *Note:* you only need to
-   flash the SD card once. For subsequent firmware updates you only need to
-   download the zImage file
-1. Unzip the sdcard.img.zip. You should then have a file named sdcard.img
+1. Download the release_raspberrpi.zip
+   [release](https://github.com/aarmono/crypto_transceiver_buildroot/releases)
+   for your model of Raspberry Pi. This is a heavily customized version of the
+   Linux software that normally runs on a Raspberry Pi and will *not* run
+   anything else but the barebones software necessary to run the
+   crypto_transceiver software. *Note:* you only need to flash the SD card once.
+   For subsequent firmware updates you only need to use the zImage file
+1. Unzip the release_raspberrypi.zip. You should then have a file named sdcard.img
 1. Follow the [instructions](https://www.raspberrypi.org/documentation/installation/installing-images/)
    on the Raspberry Pi site for flashing an image to the SD card.
 
