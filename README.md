@@ -192,6 +192,8 @@ This programming and key generation process is also shown in
 
 ## Generatng and Saving a Key ##
 
+### On Windows ###
+
 1. Download the Crypto Transceiver Config
    [Utility](https://github.com/aarmono/CryptoTransceiverUtil/releases). This
    will allow you to generate an encryption key and load it onto the SD card or
@@ -206,9 +208,16 @@ This programming and key generation process is also shown in
    ![Save Dialog](images/save_dialog.png)
 1. Click "OK"
 
+### On Linux ###
+1. Open a terminal and cd into the mount point for the SD card
+1. Ensure a directory named `config` exists on the SD card
+1. Run the following command: `dd if=/dev/random of=config/key bs=131 count=1`
+
 ## Loading an Existing Key ##
 
 You may wish to program an SD card using an existing key. To do so.
+
+### On Windows ###
 
 1. Run the Crypto Transceiver Config Utility
 1. Click the "Read Key From SD" button.
@@ -217,6 +226,13 @@ You may wish to program an SD card using an existing key. To do so.
 
 This key can now be saved to an SD card as usual. This does not require the
 original SD card still be plugged into the computer.
+
+### On Linux ###
+
+1. Plug both SD cards into the computer
+1. Ensure a directory named `config` exists on the destination SD card
+1. Copy the `config/key` file from the source SD card into the `config` directory
+   on the destination SD card
 
 ## First Time Boot ##
 
