@@ -209,7 +209,7 @@ This programming and key generation process is also shown in
 1. Click "OK"
 
 ### On Linux ###
-1. Open a terminal and cd into the mount point for the SD card
+1. Open a terminal and `cd` into the mount point for the SD card
 1. Ensure a directory named `config` exists on the SD card
 1. Run the following command: `dd if=/dev/random of=config/key bs=131 count=1`
 
