@@ -75,8 +75,10 @@ FM radio channel.
 
 At a minimum, you will need the following:
 
-* 1 Raspberry Pi 3 Model B+ or Raspberry Pi Zero
-* 1 USB OTG Hub (if using a Raspberry Pi Zero)
+* 1 Raspberry Pi 3 Model B+ ~~or Raspberry Pi Zero~~ (I no longer recommend the
+  Raspberry Pi Zero due to issues getting the USB audio devices to work reliably
+  through the necessary USB hub) 
+* ~~1 USB OTG Hub (if using a Raspberry Pi Zero)~~
 * 1 Raspberry Pi Power Supply
 * 2 USB audio receivers (I used
   [these](https://www.amazon.com/MillSO-Sapphire-External-Headphone-Desktops/dp/B0827XDGV4),
