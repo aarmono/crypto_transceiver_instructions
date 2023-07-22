@@ -210,6 +210,11 @@ This programming and key generation process is also shown in
    ![Save Dialog](images/save_dialog.png)
 1. Click "OK"
 
+### Using the Built-in Configuration Utility ###
+1. Connect a keyboard and display to the Rapsberry Pi
+1. Select "Generate Encryption Key"
+1. Select "Save Current Settings to SD Card"
+
 ### On Linux ###
 1. Open a terminal and `cd` into the mount point for the SD card
 1. Ensure a directory named `config` exists on the SD card
@@ -228,6 +233,15 @@ You may wish to program an SD card using an existing key. To do so.
 
 This key can now be saved to an SD card as usual. This does not require the
 original SD card still be plugged into the computer.
+
+### Using the Built-in Configuration Utility ###
+1. Connect a keyboard and display to the Raspberry Pi
+1. Select "Advanced SD Card Operations"
+1. Select "Select Configuration Items to Load/Save"
+1. Unselect everything but "Encryption Key" and press Enter
+1. Select "Load Selected Items From SD Card"
+1. Replace the SD Card
+1. Select "Save Selected Items To SD Card"
 
 ### On Linux ###
 
