@@ -252,27 +252,51 @@ original SD card still be plugged into the computer.
 
 ## First Time Boot ##
 
-There still likely will need to be some configuration which needs to be
-performed on the device the first time it is powered on, such as adjusting
-microphone and speaker volume settings on both audio devices. To do this,
-ensure a programmed SD card with key is installed in the Raspberry Pi, both
-audio devices are plugged into their own USB ports, and that a monitor is
-connected to the Raspberry Pi through the HDMI connector. A keyboard will also
-need to be connected, but it is recommended that this be done after the system
-boots up, as the keyboard may affect the order in which USB devices are
-initialized during start-up.
+There still will need to be some configuration which needs to be performed
+on the device the first time it is powered on. To do this, ensure a programmed
+SD card with key is installed in the Raspberry Pi, both audio devices are plugged
+into their own USB ports, a monitor is connected to the Raspberry Pi through the
+HDMI connector, and a keyboard is connected to a USB port.
 
 Power on the device. After a few seconds, the boot process should complete; and
-you should hear what sounds like noise coming out of one of the audio devices.
-This is the side that will be connected to your radio or phone. The other device
-will be connected to your headset.
+you should see a configuration interface displayed on your screen.
 
-A prompt should appear on the screen telling you to select one of the audio
-devices or "save". To perform this part of the setup process it is important
-to have some way of checking voice levels. One way to do this is to connect
-the radio output to the radio input using a male-male cable. This will verify
-that the levels on the radio side are adequate to decode the signal as well as
-provide you with voice feedback you can use to adjust the headset levels.
+You will first need to assign each USB audio device as either the Headset device
+or the Radio device. To do this:
+
+1. Highlight "Assign Audio Devices" and press Enter
+1. While facing the USB ports of the Pi, use the arrow keys to select which port
+   the audio device you wish to use for the Headset is connected to.
+1. Confirm your choice by pressing Spacebar. The selection should now have a star
+   next to it. Then press Enter
+1. Use the arow keys to select which port the audio device you wish to use for the
+   Radio is connected to.
+1. Confirm your choice by pressing Spacebar. The selection should now have a star
+   next to it. Then press Enter.
+
+Next you will need to adjust the audio settings for the Headset and Radio devices.
+To do this:
+
+1. Highlight Configure Headset Volume and press Enter. A configuration screen will
+   appear.
+1. The following are the configuration settings I use. Navigate between settings
+   by pressing the Left and Right arrow keys. The "Mic" setting that is set to
+   0 appears to be some sort of sidetone, so I always turn it off. Auto Gain
+   Control can be toggled by highlighting it with the arrow keys and pressing "m".
+   Additional help is available by pressing F1
+1. When the settings are set as desired, press Escape to exit
+1. Highlight Configure Radio Volume and press Enter. A configuration screen will
+   appear.
+1. The following are the configuration settings I use. Navigate between settings
+   by pressing the Left and Right arrow keys. As above, I turn off the sidetone.
+   It is also important on the Radio device that Auto Gain Control be turned Off.
+   If the settings are too high the signal can become clipped/distorted.
+1. When the settings are set as desired, press Escape to exit
+
+If you have not already done so, create an encryption key by selecting "Generate
+Encryption Key and press Enter". You can also adjust other settings as desired.
+When you have finished, select "Save Current Settings to SD Card". If this is
+successful, you should see a messsage to that effect.
 
 Once you do this, select each device. A user interface will be displayed on the
 screen that will allow you to adjust levels of each audio device. Initially the
