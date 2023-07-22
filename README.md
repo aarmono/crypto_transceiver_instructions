@@ -164,7 +164,9 @@ modification this build could be put into an enclosure for improved portability.
    they are wedged between the battery pack and the USB Audio device dongles.
    Hot glue the cable to the battery pack and USB Audio devices to to prevent
    them from being bent or damaged, taking care that the USB cable is not
-   pushing them above horizontal. ![Bottom](images/back_cable_route.jpg)
+   pushing them above horizontal.
+   
+   ![Bottom](images/back_cable_route.jpg)
 1) Use heavy duty double-sided tape or hot glue to attach the power switch to
    the side of the battery
 1) Hot glue the audio connectors from the USB Audio devices to the sides of the
@@ -201,12 +203,18 @@ This programming and key generation process is also shown in
    will allow you to generate an encryption key and load it onto the SD card or
    update firmware versions when there are updated versions of firmware
 1. Run the Crypto Transciever Config Utility
-1. Click "New Key" ![New Key](images/new_key.png). You should see text in the
-   "Key Hash" textbox. Note this is *not* the key itself but merely a way you
-   can visually distinguish whether or not two SD cards are programmed with
-   the same key
-1. Click "Save Key to SD" ![Save Key](images/save_key.png)
+1. Click "New Key"
+
+   ![New Key](images/new_key.png).
+
+   You should see text in the "Key Hash" textbox. Note this is *not* the key itself
+   but merely a way you can visually distinguish whether or not two SD cards are
+   programmed with the same key
+1. Click "Save Key to SD"
+  
+   ![Save Key](images/save_key.png)
 1. In the dialog box that appears, select the SD card you wish to write to.
+
    ![Save Dialog](images/save_dialog.png)
 1. Click "OK"
 
@@ -261,55 +269,64 @@ HDMI connector, and a keyboard is connected to a USB port.
 Power on the device. After a few seconds, the boot process should complete; and
 you should see a configuration interface displayed on your screen.
 
+![Main Menu](images/configure_headset.png)
+
 You will first need to assign each USB audio device as either the Headset device
 or the Radio device. To do this:
 
 1. Highlight "Assign Audio Devices" and press Enter
+
+   ![Assign Audio Devices](images/main_assign.png)
 1. While facing the USB ports of the Pi, use the arrow keys to select which port
    the audio device you wish to use for the Headset is connected to.
+
+   ![Highlight Headset](images/assign_headset_highlight.png)
 1. Confirm your choice by pressing Spacebar. The selection should now have a star
    next to it. Then press Enter
+
+   ![Select Headset](images/assign_headset_select.png)
 1. Use the arow keys to select which port the audio device you wish to use for the
    Radio is connected to.
+
+   ![Highlight Radio](images/assign_radio_highlight.png)
 1. Confirm your choice by pressing Spacebar. The selection should now have a star
    next to it. Then press Enter.
+
+   ![Select Radio](images/assign_radio_select.png)
 
 Next you will need to adjust the audio settings for the Headset and Radio devices.
 To do this:
 
 1. Highlight Configure Headset Volume and press Enter. A configuration screen will
    appear.
+   
+   ![Configure Headset](images/configure_headset.png)
 1. The following are the configuration settings I use. Navigate between settings
    by pressing the Left and Right arrow keys. The "Mic" setting that is set to
    0 appears to be some sort of sidetone, so I always turn it off. Auto Gain
    Control can be toggled by highlighting it with the arrow keys and pressing "m".
    Additional help is available by pressing F1
+   
+   ![Headset Settings](images/headset_settings.png)
 1. When the settings are set as desired, press Escape to exit
 1. Highlight Configure Radio Volume and press Enter. A configuration screen will
    appear.
+
+   ![Configure Radio](images/configure_radio.png)
 1. The following are the configuration settings I use. Navigate between settings
    by pressing the Left and Right arrow keys. As above, I turn off the sidetone.
    It is also important on the Radio device that Auto Gain Control be turned Off.
    If the settings are too high the signal can become clipped/distorted.
+
+   ![Radio Settings](images/radio_settings.png)
 1. When the settings are set as desired, press Escape to exit
 
 If you have not already done so, create an encryption key by selecting "Generate
 Encryption Key and press Enter". You can also adjust other settings as desired.
-When you have finished, select "Save Current Settings to SD Card". If this is
-successful, you should see a messsage to that effect.
+When you have finished, select "Save Current Settings to SD Card".
 
-Once you do this, select each device. A user interface will be displayed on the
-screen that will allow you to adjust levels of each audio device. Initially the
-screen displayed is the speaker output. This screen is a bit confusing, because
-it will show you a volume bar labeled "microphone". This setting configures the
-side tone volume. To adjust the microphone volume you will need to press "tab"
-until you see just one volume bar labeled "microphone". Side tone needs to be
-turned *off* on the radio device: press the "m" key to mute it; you should
-see "MM" displayed below the volume bar when it is muted. I would also recommend
-turning off auto-gain on the radio device, also by pressing the "m" key to mute
+![Save Settings](images/save_settings.png)
 
-The left/right arrow keys will allow you to cycle through settings, and the
-up/down arrow keys will allow you to adjust volume settings. Once you are done,
-the Escape key will exit out of the UI. Once you have adjusted both interfaces,
-follow the commands on the screen to save the settings to the SD card. They will
-be loaded from the SD card whenever the system is powered on.
+If this is successful, you should see a messsage to that effect.
+
+![Settings Saved](images/settings_saved.png)
