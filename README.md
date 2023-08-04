@@ -193,67 +193,21 @@ This programming and key generation process is also shown in
 
 ## Generatng and Saving a Key ##
 
-### On Windows ###
-
-1. Download the Crypto Transceiver Config
-   [Utility](https://github.com/aarmono/CryptoTransceiverUtil/releases). This
-   will allow you to generate an encryption key and load it onto the SD card or
-   update firmware versions when there are updated versions of firmware
-1. Run the Crypto Transciever Config Utility
-1. Click "New Key"
-
-   ![New Key](images/new_key.png).
-
-   You should see text in the "Key Hash" textbox. Note this is *not* the key itself
-   but merely a way you can visually distinguish whether or not two SD cards are
-   programmed with the same key
-1. Click "Save Key to SD"
-  
-   ![Save Key](images/save_key.png)
-1. In the dialog box that appears, select the SD card you wish to write to.
-
-   ![Save Dialog](images/save_dialog.png)
-1. Click "OK"
-
-### Using the Built-in Configuration Utility ###
 1. Connect a keyboard and display to the Rapsberry Pi
-1. Select "Generate Encryption Key"
-1. Select "Save Current Settings to SD Card"
-
-### On Linux ###
-1. Open a terminal and `cd` into the mount point for the SD card
-1. Ensure a directory named `config` exists on the SD card
-1. Run the following command: `dd if=/dev/random of=config/key bs=131 count=1`
+1. Navigate to "Configuration Options" -> "Configure Encryption"
+1. Select "Generate Encryption Keys"
+1. Generate as many keys as desired, then press Enter
+1. Navigate to "Deploy Images" -> "Keys Only"
+1. Follow the on-screen prompts
 
 ## Loading an Existing Key ##
 
 You may wish to program an SD card using an existing key. To do so.
 
-### On Windows ###
-
-1. Run the Crypto Transceiver Config Utility
-1. Click the "Read Key From SD" button.
-1. In the dialog box that appears, select the SD card you wish to read from
-1. Click "OK". The text in the "Key Hash" textbox should be updated.
-
-This key can now be saved to an SD card as usual. This does not require the
-original SD card still be plugged into the computer.
-
-### Using the Built-in Configuration Utility ###
 1. Connect a keyboard and display to the Raspberry Pi
-1. Select "Advanced SD Card Operations"
-1. Select "Select Configuration Items to Load/Save"
-1. Unselect everything but "Encryption Key" and press Enter
-1. Select "Load Selected Items From SD Card"
-1. Replace the SD Card
-1. Select "Save Selected Items To SD Card"
-
-### On Linux ###
-
-1. Plug both SD cards into the computer
-1. Ensure a directory named `config` exists on the destination SD card
-1. Copy the `config/key` file from the source SD card into the `config` directory
-   on the destination SD card
+1. Select "Load Keys"
+1. Navigate to "Configuration Options" -> "Deploy Images" -> "Keys Only"
+1. Follow the on-screen prompts
 
 ## First Time Boot ##
 
@@ -266,14 +220,20 @@ HDMI connector, and a keyboard is connected to a USB port.
 Power on the device. After a few seconds, the boot process should complete; and
 you should see a configuration interface displayed on your screen.
 
-![Main Menu](images/configure_headset.png)
+![Main Menu](images/broadcast_tts.png)
 
 You will first need to assign each USB audio device as either the Headset device
 or the Radio device. To do this:
 
+1. Highlight "Configuration Options" and press Enter
+
+   ![Configuration Options](images/main_configure.png)
+1. Highlight "Configure Hardware" and press Enter
+
+   ![Configure Hardware](images/configure_hardware.png)
 1. Highlight "Assign Audio Devices" and press Enter
 
-   ![Assign Audio Devices](images/main_assign.png)
+   ![Assign Audio Devices](images/hardware_assign.png)
 1. While facing the USB ports of the Pi, use the arrow keys to select which port
    the audio device you wish to use for the Headset is connected to.
 
@@ -294,7 +254,7 @@ or the Radio device. To do this:
 Next you will need to adjust the audio settings for the Headset and Radio devices.
 To do this:
 
-1. Highlight Configure Headset Volume and press Enter. A configuration screen will
+1. Highlight "Adjust Headset Volume" and press Enter. A configuration screen will
    appear.
    
    ![Configure Headset](images/configure_headset.png)
@@ -306,7 +266,7 @@ To do this:
    
    ![Headset Settings](images/headset_settings.png)
 1. When the settings are set as desired, press Escape to exit
-1. Highlight Configure Radio Volume and press Enter. A configuration screen will
+1. Highlight "Adjust Radio Volume" and press Enter. A configuration screen will
    appear.
 
    ![Configure Radio](images/configure_radio.png)
@@ -318,9 +278,9 @@ To do this:
    ![Radio Settings](images/radio_settings.png)
 1. When the settings are set as desired, press Escape to exit
 
-If you have not already done so, create an encryption key by selecting "Generate
-Encryption Key and press Enter". You can also adjust other settings as desired.
-When you have finished, select "Save Current Settings to SD Card".
+If you have not already done so, create an encryption key by following the
+"Generating and Saving a Key" step above. You can also adjust other settings
+as desired. When you have finished, select "Save Current Settings to SD Card".
 
 ![Save Settings](images/save_settings.png)
 
