@@ -327,3 +327,17 @@ When you have finished, select "Save Current Settings to SD Card".
 If this is successful, you should see a messsage to that effect.
 
 ![Settings Saved](images/settings_saved.png)
+
+## Advanced Configuration ##
+
+![Default Pinout](images/default_pinout.png)
+
+Some functions can be performed using buttons connected to the Pi GPIO header:
+
+* Headset volume
+* Plain/Secure toggle
+* Key Load
+* Key Select
+* Push to Talk
+
+The default pin assignments are listed in the diagram above. All input pins default to Active Low with the internal pull-up resistor enabled. All output pins default to Active Low, open drain.
