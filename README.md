@@ -353,7 +353,35 @@ Follow the steps below to use the "Key Select" feature.
    wish to use.
 1. With both the primary and secondary action buttons held down, release the
    primary action button to update the key currently in use. You will hear
-   a confirmation notification over the headset
+   a confirmation notification over the headset.
+1. Release the secondary action button.
 
 While the primary action button is held down and the secondary action button is
 released, release the primary action button to cancel the key selection process.
+
+### Key Load ###
+
+The Key Load feature will load keys into the device under the following conditions:
+
+* Keys have not already been loaded into the device
+* There is a USB drive or SD card containing keys installed in the device
+
+When keys are loaded into the device, the Key Index will be set to the first Slot
+containing a key
+
+Follow the steps below to use the "Key Load" feature.
+
+1. Press and hold the secondary action button. You will hear "Key Load" over
+   the headset
+1. With the secondary action button held down, press and hold the primary
+   action button. If there is a card/drive with keys and the device is
+   ready to load them (see above conditions), you will hear "Ready to Load"
+   over the headset. Otherwise you will hear "Cannot Load".
+1. With both the primary and secondary action buttons held down, release the
+   secondary action button to Load the keys. You will hear a confirmation
+   notification over the headset confirming keys have been loaded and the
+   Index of the Key Slot currently in use.
+1. Release the primary action button.
+
+While the secondary action button is held down and the primary action button is
+released, release the secondary action button to cancel the key selection process.
