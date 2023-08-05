@@ -371,8 +371,9 @@ containing a key
 
 Follow the steps below to use the "Key Load" feature.
 
+1. Ensure an SD card or USB drive containing keys is installed in the device.
 1. Press and hold the secondary action button. You will hear "Key Load" over
-   the headset
+   the headset.
 1. With the secondary action button held down, press and hold the primary
    action button. If there is a card/drive with keys and the device is
    ready to load them (see above conditions), you will hear "Ready to Load"
@@ -382,6 +383,7 @@ Follow the steps below to use the "Key Load" feature.
    notification over the headset confirming keys have been loaded and the
    Index of the Key Slot currently in use.
 1. Release the primary action button.
+1. Remove the SD card or USB drive containing keys from the device.
 
 While the secondary action button is held down and the primary action button is
 released, release the secondary action button to cancel the key selection process.
