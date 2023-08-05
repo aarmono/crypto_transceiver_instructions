@@ -300,7 +300,9 @@ Some functions can be performed using buttons connected to the Pi GPIO header:
 * Key Select
 * Push to Talk
 
-The default pin assignments are listed in the diagram above. All input pins default to Active Low with the internal pull-up resistor enabled. All output pins default to Active Low, open drain.
+The default pin assignments are listed in the diagram above. All input pins
+default to Active Low with the internal pull-up resistor enabled. All output
+pins default to Active Low, open drain.
 
 ### Configure Push To Talk ###
 
@@ -321,7 +323,37 @@ Push to Talk is the only I/O that needs to be enabled.
 1. Use the arow keys to select "On"
 
    ![Highlight On](images/highlight_ptt.png)
-1. Confirm your choice by pressing Spacebar. The selection should now have a star
-   next to it. Then press Enter
+1. Confirm your choice by pressing Spacebar. The selection should now have a
+   star next to it. Then press Enter
 
    ![Select On](images/select_ptt.png)
+
+## Using The Keypad ##
+
+This section describes how to use external buttons connected to the GPIO header
+(the "keypad") to accomplish certain tasks.
+
+The keypad has two multi-function "action" buttons: the "primary" action button
+and the "secondary" action button. A triple-press of either action button will
+activate the primary TTS alert broadcast or the secondary TTS alert broadcast.
+
+### Key Select ###
+
+Follow the steps below to use the "Key Select" feature.
+
+1. Press and hold the primary action button. You will hear "Key Select" over
+   the headset
+1. With the primary action button held down, press and hold the secondary
+   action button. You will hear the index of the key currently in use.
+1. With the primary action button held down, release the secondary action
+   to go the next key slot index with a key.
+1. With the primary action button held down, press and hold the secondary
+   action button. You will hear the index of the currently selected key.
+1. Continue this press and release until you hear the index of the key you
+   wish to use.
+1. With both the primary and secondary action buttons held down, release the
+   primary action button to update the key currently in use. You will hear
+   a confirmation notification over the headset
+
+While the primary action button is held down and the secondary action button is
+released, release the primary action button to cancel the key selection process.
