@@ -177,9 +177,6 @@ modification this build could be put into an enclosure for improved portability.
 
 ## Programming ##
 
-This programming and key generation process is also shown in
-[this video](https://www.youtube.com/watch?v=EnVlljKxq0s).
-
 1. Download the release_raspberrpi.zip
    [release](https://github.com/aarmono/crypto_transceiver_buildroot/releases)
    for your model of Raspberry Pi. This is a heavily customized version of the
@@ -188,8 +185,9 @@ This programming and key generation process is also shown in
    crypto_transceiver software. *Note:* you only need to flash the SD card once.
    For subsequent firmware updates you only need to use the zImage file
 1. Unzip the release_raspberrypi.zip. You should then have a file named sdcard.img
-1. Follow the [instructions](https://www.raspberrypi.org/documentation/installation/installing-images/)
-   on the Raspberry Pi site for flashing an image to the SD card.
+1. I recommend using [balenaEtcher](https://etcher.balena.io/) to flash the image
+   onto the SD Card. Install the software and follow the prompts, selecting the
+   sdcard.img file when asked to supply an image to write to the SD Card.
 
 ## Generatng and Saving a Key ##
 
@@ -198,7 +196,8 @@ This programming and key generation process is also shown in
 1. Select "Generate Encryption Keys"
 1. Generate as many keys as desired, then press Enter
 1. Navigate to "Deploy Images" -> "Keys Only"
-1. Follow the on-screen prompts
+1. Follow the on-screen prompts. This will format your SD Card
+   or USB Drive with an image containing the keys
 
 ## Loading an Existing Key ##
 
@@ -207,7 +206,8 @@ You may wish to program an SD card using an existing key. To do so.
 1. Connect a keyboard and display to the Raspberry Pi
 1. Select "Load Keys"
 1. Navigate to "Configuration Options" -> "Deploy Images" -> "Keys Only"
-1. Follow the on-screen prompts
+1. Follow the on-screen prompts. This will format your SD Card
+   or USB Drive with an image containing the keys.
 
 ## First Time Boot ##
 
@@ -287,6 +287,63 @@ as desired. When you have finished, select "Save Current Settings to SD Card".
 If this is successful, you should see a messsage to that effect.
 
 ![Settings Saved](images/settings_saved.png)
+
+## Device Deployment ##
+
+The Console Interface has capabilities for creating duplicate SD Cards with
+the same hardware, firmware, and radio configuration, in scenarios where
+multiple devices will be deployed to the field. These devices are "locked",
+meaning the user is prevented from making changes to the configuration or
+(optionally) accessing the Console Interface at all.
+
+1. Highlight "Configuration Options" and press Enter
+
+   ![Configuration Options](images/main_configure.png)
+1. Highlight "Deploy Images" and press Enter
+
+   ![Config Deploy](images/config_deploy.png)
+1. You will see a number of options for images to deploy onto an SD Card
+   or USB Drive. "Locked Device" images are written so that the user cannot
+   change system configuration, and the SD Card is then permanently made
+   read-only to prevent tampering. "Handheld" images additionally lock
+   the display entirely so it cannot be used and is recommended when
+   deploying devices which will not use the screen.
+
+   "Keys Only" images will write just the encryption keys to either an SD
+   Card or USB Drive. These cards/drives are not write-protected after the
+   process completes, and it is recommended that after keys are loaded onto
+   devices the media used for key storage be destroyed or (if the storage
+   media supports it) securely erased.
+
+   ![Deployment Options](images/deploy_options.png)
+1. Once an option is selected, you will be prompted to insert storage media.
+   Locked Device images can only be written to SD Cards.
+
+   ![Insert Storage](images/insert_storage.png)
+   
+   Keys can be written to either an SD Card or a USB Drive. If both a USB Drive
+   and SD Card is installed in the system, the USB Drive will be used. Select
+   "Yes" once you have done so to start the process.
+
+   ![Insert USB Storage](images/insert_storage_usb.png)
+1. Once you have selected "Yes", the image writing process will start. At the
+   end you should see a message that says "Success".
+
+   ![Write Success](images/write_success.png)
+1. Once you see "Success", if you do not wish to write protect the SD Card you
+   can remove it. If the SD Card is installed in the system once you press "OK",
+   it will be write-protected. You will see one of three messaages:
+
+   * "Write Protect Succeeded": The write protection process completed successfully,
+     and the data on the SD Card can no longer be modified.
+   * "Could Not Write Protect": The SD Card does not support write protection, and
+     the card is *not* write protected.
+   * "Write Protect Doesn't Work": The SD Card claimed to write protect the drive,
+     but the software was still able to made changes to it.
+1. Once you have selected "OK" you will be prompted to insert another storage media
+   or stop the deployment process.
+
+   ![Insert Storage](images/insert_storage.png)
 
 ## Advanced Configuration ##
 
