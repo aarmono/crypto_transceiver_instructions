@@ -303,19 +303,33 @@ meaning the user is prevented from making changes to the configuration or
 
    ![Config Deploy](images/config_deploy.png)
 1. You will see a number of options for images to deploy onto an SD Card
-   or USB Drive. "Locked Device" images are written so that the user cannot
+   or USB Drive. "Locked" Device images are written so that the user cannot
    change system configuration, and the SD Card is then permanently made
    read-only to prevent tampering. "Handheld" images additionally lock
-   the display entirely so it cannot be used and is recommended when
-   deploying devices which will not use the screen.
-
-   "Keys Only" images will write just the encryption keys to either an SD
-   Card or USB Drive. These cards/drives are not write-protected after the
-   process completes, and it is recommended that after keys are loaded onto
-   devices the media used for key storage be destroyed or (if the storage
-   media supports it) securely erased.
+   the display entirely so it cannot be used. This option is recommended
+   when deploying devices which will not have a screen connected.
 
    ![Deployment Options](images/deploy_options.png)
+
+   Locked Device images with keys are only recommended in situations where
+   a single SD Card is used to initialize multiple devices which are deployed
+   without an SD Card installed. Ideally the SD Card is destroyed after
+   the devices are initialized. In this configuration the device is rendered
+   inoperable by disconnecting power.
+
+   Locked Device images without keys are recommended in situations where
+   each device is deployed with in SD Card installed. Keys are then loaded
+   from a "Keys Only" SD Card or USB Drive, and that Card/Drive is removed
+   from the device prior to deployment. In this configuration key zeroize
+   is accomplished by disconnecting power, and when power is reconnected
+   the device can still function in an insecure mode.
+
+   "Keys Only" images will write just the encryption keys to either an SD
+   Card or USB Drive. As mentioned above, they are designed to work in
+   combination with Locked Device images without keys. These cards/drives
+   are not write-protected after the process completes, and it is recommended
+   that after keys are loaded onto devices the media used for key storage be
+   destroyed or (if the storage media supports it) securely erased.
 1. Once an option is selected, you will be prompted to insert storage media.
    Locked Device images can only be written to SD Cards.
 
@@ -336,12 +350,14 @@ meaning the user is prevented from making changes to the configuration or
 
    * "Write Protect Succeeded": The write protection process completed successfully,
      and the data on the SD Card can no longer be modified.
-   * "Could Not Write Protect": The SD Card does not support write protection, and
-     the card is *not* write protected.
+   * "Could Not Write Protect": The SD Card does not support write protection (or you
+     removed it from the device prior to pressing "OK", and the card is *not* write
+     protected.
    * "Write Protect Doesn't Work": The SD Card claimed to write protect the drive,
-     but the software was still able to made changes to it.
-1. Once you have selected "OK" you will be prompted to insert another storage media
-   or stop the deployment process.
+     but the software was still able to write to it. If this happens you will find
+     a file named "BAD_WP" if you read that SD Card using a PC.
+1. Once you have selected "OK" you will be prompted to copy the image to another
+   storage media by pressing "Yes" or stop the deployment process by pressing "No".
 
    ![Insert Storage](images/insert_storage.png)
 
