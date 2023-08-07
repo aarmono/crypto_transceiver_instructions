@@ -288,6 +288,46 @@ If this is successful, you should see a messsage to that effect.
 
 ![Settings Saved](images/settings_saved.png)
 
+## Advanced Configuration ##
+
+![Default Pinout](images/default_pinout.png)
+
+Some functions can be performed using buttons connected to the Pi GPIO header:
+
+* Headset volume
+* Plain/Secure toggle
+* Key Load
+* Key Select
+* Push to Talk
+
+The default pin assignments are listed in the diagram above. All input pins
+default to Active Low with the internal pull-up resistor enabled. All output
+pins default to Active Low, open drain.
+
+### Configure Push To Talk ###
+
+Push to Talk is the only I/O that needs to be enabled. 
+
+1. Highlight "Configuration Options" and press Enter
+
+   ![Configuration Options](images/main_configure.png)
+1. Highlight "Configure Hardware" and press Enter
+
+   ![Configure Hardware](images/configure_hardware.png)
+1. Highlight "Configure PTT GPIO" and press Enter
+
+   ![Configure PTT](images/configure_ptt.png)
+1. Highlight "Enable PTT" and press Enter
+
+   ![Enable PTT](images/enable_ptt.png)
+1. Use the arow keys to select "On"
+
+   ![Highlight On](images/highlight_ptt.png)
+1. Confirm your choice by pressing Spacebar. The selection should now have a
+   star next to it. Then press Enter
+
+   ![Select On](images/select_ptt.png)
+
 ## Device Deployment ##
 
 The Console Interface has capabilities for creating duplicate SD Cards with
@@ -360,46 +400,6 @@ meaning the user is prevented from making changes to the configuration or
    storage media by pressing "Yes" or stop the deployment process by pressing "No".
 
    ![Insert Storage](images/insert_storage.png)
-
-## Advanced Configuration ##
-
-![Default Pinout](images/default_pinout.png)
-
-Some functions can be performed using buttons connected to the Pi GPIO header:
-
-* Headset volume
-* Plain/Secure toggle
-* Key Load
-* Key Select
-* Push to Talk
-
-The default pin assignments are listed in the diagram above. All input pins
-default to Active Low with the internal pull-up resistor enabled. All output
-pins default to Active Low, open drain.
-
-### Configure Push To Talk ###
-
-Push to Talk is the only I/O that needs to be enabled. 
-
-1. Highlight "Configuration Options" and press Enter
-
-   ![Configuration Options](images/main_configure.png)
-1. Highlight "Configure Hardware" and press Enter
-
-   ![Configure Hardware](images/configure_hardware.png)
-1. Highlight "Configure PTT GPIO" and press Enter
-
-   ![Configure PTT](images/configure_ptt.png)
-1. Highlight "Enable PTT" and press Enter
-
-   ![Enable PTT](images/enable_ptt.png)
-1. Use the arow keys to select "On"
-
-   ![Highlight On](images/highlight_ptt.png)
-1. Confirm your choice by pressing Spacebar. The selection should now have a
-   star next to it. Then press Enter
-
-   ![Select On](images/select_ptt.png)
 
 ## Using The Keypad ##
 
