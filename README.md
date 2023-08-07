@@ -268,7 +268,7 @@ If this is successful, you should see a messsage to that effect.
 
 ![Settings Saved](images/settings_saved.png)
 
-## Generatng Keys ##
+## Generating Keys ##
 
 1. Highlight "Configuration Options" and press Enter
 
@@ -299,6 +299,7 @@ Some functions can be performed using buttons connected to the Pi GPIO header:
 * Key Load
 * Key Select
 * Push to Talk
+* TTS Alert Broadcasts
 
 The default pin assignments are listed in the diagram above. All input pins
 default to Active Low with the internal pull-up resistor enabled. All output
@@ -401,18 +402,64 @@ meaning the user is prevented from making changes to the configuration or
 
    ![Insert Storage](images/insert_storage.png)
 
-## Using The Keypad ##
+## Broadcasting TTS Alerts ##
 
-This section describes how to use external buttons connected to the GPIO header
-(the "keypad") to accomplish certain tasks.
+The system has the ability to broadcast two pre-configured Text To Speech Alerts,
+and custom Alerts can be broadcast using the Console Interface.
+
+### Using The Console Interface ###
+
+Follow the steps below to use the "TTS Alert Broadcast" feature with the Console Interface:
+
+1. Highlight the "Broadcast TTS Alert" option and press Enter
+
+   ![Broadcast TTS](images/broadcast_tts.png)
+1. Using the arrow keys, highlight either the Primary, Secondary, or Custom Alert option
+
+   ![Alert Hightlight](images/tts_highlight.png)
+1. Select the option by pressing Spacebar
+
+   ![Alert Select](images/tts_select.png)
+1. Press Enter to broadcast the Alert. You will hear it play over the headset.
+1. If you select "Custom" Alert, then an input box will appear prompting you to
+   enter the message to be broadcast
+
+   ![Custom Blank](images/custom_blank.png)
+1. Type the message using the keyboard, then press Enter to broadcast it. You
+   will hear it play over the headset
+
+   ![Custom Alert](images/custom_alert.png)
+
+### Using The Keypad ###
 
 The keypad has two multi-function "action" buttons: the "primary" action button
 and the "secondary" action button. A triple-press of either action button will
 activate the primary TTS alert broadcast or the secondary TTS alert broadcast.
 
-### Key Select ###
+## Key Select ##
 
-Follow the steps below to use the "Key Select" feature.
+### Using The Console Interface ###
+
+Follow the steps below to use the "Key Select" feature with the Console Interface:
+
+1. When keys are loaded into the device a "Select Active Key" option appears
+   in the Main Menu. Highlight "Select Active Key" and press Enter
+
+   ![Config Select](images/config_select.png)
+1. Use the arrow keys to highlight the key you wish to select as the Active Key
+
+   ![Highlight Key](images/highlight_key.png)
+1. Select the key by pressing Spacebar. An asterisk will appear net to the Key
+   Slot.
+
+   ![Select Key](images/select_key.png)
+1. Confirm your choice by pressing Enter. A confirmation chime will be played over
+   the headset
+   
+
+### Using The Keypad ###
+
+Follow the steps below to use the "Key Select" feature with the kaypad:
 
 1. Press and hold the primary action button. You will hear "Key Select" over
    the headset
@@ -432,19 +479,36 @@ Follow the steps below to use the "Key Select" feature.
 While the primary action button is held down and the secondary action button is
 released, release the primary action button to cancel the key selection process.
 
-### Key Load ###
+## Key Load ##
 
 The Key Load feature will load keys into the device under the following conditions:
 
 * Keys have not already been loaded into the device
-* There is a USB drive or SD card containing keys installed in the device
+* There is a USB Drive or SD Card containing keys installed in the device
 
 When keys are loaded into the device, the Key Index will be set to the first Slot
 containing a key
 
-Follow the steps below to use the "Key Load" feature.
+### Using The Console Interface ###
 
-1. Ensure an SD card or USB drive containing keys is installed in the device.
+Follow the steps below to use the "Key Load" feature with the Console Interface:
+
+1. Ensure an SD Card or USB Drive containing keys is installed in the device.
+1. When no keys are loaded into the device a "Load Keys" option appears
+   in the Main Menu. Highlight "Load Keys" and press Enter
+
+   ![Config Load](images/config_load.png)
+1. If the keys were loaded from the SD Card or USB Drive, a message box will be
+   displayed indicating keys were loaded, and a confirmation chime will be played
+   over the headset
+
+   ![Keys Loaded](images/keys_loaded.png)
+
+### Using The Keypad ###
+
+Follow the steps below to use the "Key Load" feature with the keypad:
+
+1. Ensure an SD Card or USB Drive containing keys is installed in the device.
 1. Press and hold the secondary action button. You will hear "Key Load" over
    the headset.
 1. With the secondary action button held down, press and hold the primary
