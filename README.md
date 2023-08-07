@@ -329,6 +329,33 @@ Push to Talk is the only I/O that needs to be enabled.
 
    ![Select On](images/select_ptt.png)
 
+### Configure TTS Alert Broadcasts ###
+
+The software has the ability to broadcast two pre-configured messages as
+Text To Speech Alerts using the Console Interface or the keypad. To
+Configure these:
+
+1. Highlight "Configuration Options" and press Enter
+
+   ![Configuration Options](images/main_configure.png)
+1. Highlight "Configure TTS Alert Broadcasts" and press Enter
+
+   ![Configure TTS](images/configure_tts.png)
+1. Hightlight "Configure Primary TTS Alert" and press Enter
+
+   ![Configure Primary](images/config_primary.png)
+1. Using the Keyboard, enter a message and press Enter. Messages
+   cannot exceed 160 characters in length
+
+   ![Primary Input](images/input_primary.png)
+1. Hightlight "Configure Secondary TTS Alert" and press Enter
+
+   ![Configure Primary](images/config_primary.png)
+1. Using the Keyboard, enter a message and press Enter. Messages
+   cannot exceed 160 characters in length
+
+   ![Secondary Input](images/input_secondary.png)
+
 ## Device Deployment ##
 
 The Console Interface has capabilities for creating duplicate SD Cards with
