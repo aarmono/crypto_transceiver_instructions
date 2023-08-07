@@ -189,26 +189,6 @@ modification this build could be put into an enclosure for improved portability.
    onto the SD Card. Install the software and follow the prompts, selecting the
    sdcard.img file when asked to supply an image to write to the SD Card.
 
-## Generatng and Saving a Key ##
-
-1. Connect a keyboard and display to the Rapsberry Pi
-1. Navigate to "Configuration Options" -> "Configure Encryption"
-1. Select "Generate Encryption Keys"
-1. Generate as many keys as desired, then press Enter
-1. Navigate to "Deploy Images" -> "Keys Only"
-1. Follow the on-screen prompts. This will format your SD Card
-   or USB Drive with an image containing the keys
-
-## Loading an Existing Key ##
-
-You may wish to program an SD card using an existing key. To do so.
-
-1. Connect a keyboard and display to the Raspberry Pi
-1. Select "Load Keys"
-1. Navigate to "Configuration Options" -> "Deploy Images" -> "Keys Only"
-1. Follow the on-screen prompts. This will format your SD Card
-   or USB Drive with an image containing the keys.
-
 ## First Time Boot ##
 
 There still will need to be some configuration which needs to be performed
@@ -287,6 +267,26 @@ as desired. When you have finished, select "Save Current Settings to SD Card".
 If this is successful, you should see a messsage to that effect.
 
 ![Settings Saved](images/settings_saved.png)
+
+## Generatng Keys ##
+
+1. Highlight "Configuration Options" and press Enter
+
+   ![Configuration Options](images/main_configure.png)
+1. Highlight "Configure Encryption" and press Enter
+
+   ![Configure Encryption](images/config_encryption.png)
+1. Highlight "Generate Encryption Keys" and press Enter
+
+   ![Generate Keys](images/encrypt_generate.png)
+1. Generate as many keys as desired by selecting the desired
+   Key Slot and pressing Spacebar.
+
+   ![Key Create](images/generate_keys.png)
+1. When finished, press Enter. A notification indicating keys
+   have been generated will be shown
+
+   ![Keys Created](images/keys_generated.png)
 
 ## Advanced Configuration ##
 
