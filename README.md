@@ -112,12 +112,13 @@ polished or portable, such as
   unplugging USB connectors
 * SD card extenders to make it easier to insert/remove the SD card
 * Enclosure to contain the build
+* Portable LCD and keyboard/numpad to use the Console Interface
+* Buttons to utilize the keypad, for screenless operation
 
 Note that the system works *very* well using phone charger battery instead of a
-power supply. I ran a simple "loopback" test with the device connected to an
-8000 mAH battery, and it remained operational for almost 13 hours. The software
-does not require a lot of power, and this design is well-suited to portable
-applications.
+power supply. When idle, the software consumes about 1.5 W on a Raspberry Pi 3B+.
+The software does not require a lot of power, and this design is well-suited to
+portable applications.
 
 If you decide to put it in an enclosure, it is recommended that you do *not* do
 so until you go through the programming and configuration process.
@@ -129,7 +130,7 @@ so until you go through the programming and configuration process.
 This section shows an example build that the author made. With some slight
 modification this build could be put into an enclosure for improved portability.
 
-* 1 [Raspberry Pi Model 3 B+ with enclosure and heatsinks.](https://www.amazon.com/gp/product/B01C6EQNNK/).
+* 1 [Raspberry Pi Model 3B+ with enclosure and heatsinks.](https://www.amazon.com/gp/product/B01C6EQNNK/).
   You do not need the power supply. If you put the build in an enclosure you do
   not need an enclosure for the Pi.
 * 1 Cell phone battery charger (I used a spare one I had). See above sections
